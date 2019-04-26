@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:text="Powered by ANDROID"/>
+        <Button
+            android:id="@+id/btnFetchDataFromApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pobierz dane z Internetu i wyświetl JSON"/>
+        <Button
+            android:id="@+id/btnGetDataFromDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Połącz z bazą danych SQLite i wyświetl rekordy"/>
+        <Button
+            android:id="@+id/btnGetApplicationDirectory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uzyskaj dostęp do pliku systemowego"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Czas wykonania operacji"/>
+        <TextView
+            android:id="@+id/txViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="--:--"/>
+        <TextView
+            android:id="@+id/txtViewResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:padding="8dp"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
