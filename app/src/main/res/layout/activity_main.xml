@@ -33,6 +33,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Uzyskaj dostęp do pliku systemowego"/>
+        <Button
+            android:id="@+id/btnAnimationTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wykonaj test animacji"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,12 +52,22 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:text="--:--"/>
-        <TextView
-            android:id="@+id/txtViewResponse"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="..."
-            android:padding="8dp"/>
+            android:layout_height="match_parent"
+            android:id="@+id/layout">
+            <TextView
+                android:id="@+id/txtViewResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:padding="8dp"/>
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="visible"/>
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>
 </LinearLayout>
