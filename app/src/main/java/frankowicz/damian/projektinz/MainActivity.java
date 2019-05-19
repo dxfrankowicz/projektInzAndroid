@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         btnAnimationTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Times: " + durations.toString());
                 txtViewResponse.setText("");
                 resetAnimationTest();
                 btnBeginAnimationTest = new Button(getApplicationContext());
@@ -171,24 +170,12 @@ public class MainActivity extends AppCompatActivity {
         txtViewTime.setText(String.valueOf(duration));
         txtViewResponse.setText(response);
 
-        index++;
-        if(index<10) btnGetApplicationDirectory.performClick();
-        else {
-            File file = new File(getApplicationContext().getFilesDir(), "times.txt");
-            if (!file.exists()) {
-                try {
-                    FileOutputStream outputStream;
-                    outputStream = openFileOutput("times.txt", getApplicationContext().MODE_PRIVATE);
-                    for(int i=0;i<durations.size();i++)
-                    outputStream.write(durations.get(i).getBytes());
-                    outputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    response = getErrorMsg(e);
-                    System.out.print(e.toString());
-                }
-            }
-        }
+//        index++;
+//        if(index<100) btnFetchDataFromApi.performClick();
+//        else {
+//            System.out.println(durations.toString());
+//            index=0;
+//        }
 
     }
 
